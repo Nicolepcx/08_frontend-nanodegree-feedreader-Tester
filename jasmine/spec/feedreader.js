@@ -31,7 +31,7 @@ $(function() {
          * and that the URL is not empty.
          */
         it('has a defined URL that is not empty', function() {
-            for(i = 0; i < allFeeds.length; i++) {
+            for(var i = 0, len = allFeeds.length; i < len; i++) {
                 expect(allFeeds[i].url).not.toBe(undefined);
                 expect(allFeeds[i].url).not.toBe('');
             }
@@ -43,8 +43,7 @@ $(function() {
          */
         it('it has a name and is not empty', function() {
             for(i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].name).not.toBe(undefined);
-                expect(allFeeds[i].name).not.toBe('');
+                expect(allFeeds[i].url).toBeTruthy();
             }
         });
     });
